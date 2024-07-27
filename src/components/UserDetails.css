@@ -1,0 +1,142 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width:50%;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #337ab7;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #5c397c;
+    padding: 10px;
+    border-bottom: 1px solid #337ab7;
+    border-radius: 10px 10px 0 0;
+    background-image: linear-gradient(to bottom, #f7f7f7, #e7e7e7);
+}
+
+.card-header h2 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b73335;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    outline:#3e8e41;
+    box-shadow: 0 0 5px rgba(46, 28, 119, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #18bd18;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: #19d319;
+    color: #0a0a0a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    color: #fff;
+    align-items: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:active {
+    background-color: #3e8e41;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+   .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+   .card {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+   .card {
+        margin-bottom: 5px;
+    }
+}
